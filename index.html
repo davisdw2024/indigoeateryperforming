@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Darrell Davis">
+    <meta name="keywords" content="Indigo, food, restaurant">
+    <link rel="stylesheet" href="mystyle.css">
+    <title>Indigo Restaurant</title>
+    
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-N22ZWNHETR"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-N22ZWNHETR');
+    </script>
+</head>
+<body>
+    <img src="Indigo.png" width="50" height="50" class="logo" style="float: left;">
+    <nav class="topnav">
+        <a class="active" href="index.html">Home</a>
+        <a href="whoiam.html">Who I Am</a>
+        <a href="menu.html">Menu</a>
+        <a href="contactus.html">Contact Us</a>
+    </nav>
+
+    <h1>Indigo</h1>
+    <h3>Eatery</h3>
+
+    <main>
+        <p>Welcome to Indigo Eatery, a premier new hotspot for Southern fusion cuisine with a Futuristic Jazz/House ambiance located in the heart of the Vista in downtown Columbia, SC.</p>
+    </main>
+
+    <main>
+        <h3>Follow Indigo Eatery On Our Socials!</h3>
+        <div class="social-sharing">
+            <button id="share-facebook">Share on Facebook</button>
+            <button id="share-twitter">Share on Twitter</button>
+        </div>
+    </main>
+
+    <footer>
+        <p>930 Gervais Street, Columbia SC, 29201</p>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            function shareOnFacebook() {
+                const urlToShare = 'https://davisdw2024.github.io/indigoworking/';
+                const facebookShareUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(urlToShare)}`;
+                window.open(facebookShareUrl, 'Share on Facebook', 'width=600,height=400');
+            }
+
+            function shareOnTwitter() {
+                const urlToShare = 'https://davisdw2024.github.io/indigoworking/';
+                const textToShare = 'Indigo Eatery';
+                const twitterShareUrl = `https://twitter.com/intent/tweet?url=${encodeURIComponent(urlToShare)}&text=${encodeURIComponent(textToShare)}`;
+                window.open(twitterShareUrl, 'Share on Twitter', 'width=600,height=400');
+            }
+
+            const shareFacebookButton = document.getElementById("share-facebook");
+            const shareTwitterButton = document.getElementById("share-twitter");
+
+            shareFacebookButton.addEventListener("click", shareOnFacebook);
+            shareTwitterButton.addEventListener("click", shareOnTwitter);
+        });
+    </script>
+</body>
+</html>
